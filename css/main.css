@@ -160,7 +160,9 @@ body{
     color: #333;
     border: none;
     outline: none;
+    font-family: var(--ff-font-body);
     font-size: 18px;
+    letter-spacing: 1px;
     background: none;
     padding-left: 5px;
     cursor: pointer;
