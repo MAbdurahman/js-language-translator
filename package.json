@@ -1,0 +1,10 @@
+{
+  "name": "js-language-translator",
+  "version": "1.0.0",
+  "description": "simple javascript",
+  "main": "main.js",
+  "repository": "https://github.com/MAbdurahman/js-language-translator.git",
+  "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
