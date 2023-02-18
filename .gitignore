@@ -71,6 +71,6 @@ package-lock.json
 *.vscode/
 
 debug.log
-
+yarn-error.log
 
 
