@@ -45,6 +45,7 @@ exchageIcon.addEventListener('click', () => {
 fromText.addEventListener('keyup', () => {
   if (!fromText.value) {
     toText.value = '';
+    
   }
 });
 
@@ -56,7 +57,10 @@ translateBtn.addEventListener('click', () => {
     translateFrom = selectTags[0].value,
     translateTo = selectTags[1].value;
   
-  if (!text) return;
+  if (!text) {
+    swal('Invalid Entry', 'From text cannot be empty!', 'error');
+    return;
+  }
   
   toText.setAttribute('placeholder', 'Translating...');
   let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
@@ -78,7 +82,11 @@ translateBtn.addEventListener('click', () => {
  */
 icons.forEach(icon => {
   icon.addEventListener('click', ({ target }) => {
-    if (!fromText.value || !toText.value) return;
+    
+    if (!fromText.value || !toText.value) {
+      swal('Invalid Entry', 'From text and To text are required!', 'error');
+      return;
+    }
     
     if (target.classList.contains('fa-copy')) {
       if (target.id == 'from-copy') {
